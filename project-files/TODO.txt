@@ -1,0 +1,13 @@
+Fix bug with board filled box move
+Add tests for everything
+Implement easy ai
+Implement medium ai
+Implement hard ai
+Text based playing for ai
+GUI playing for ai
+
+
+#ways to get more LOC 
+-Add statistics to main/gui, see how many moves each player has made 
+-Add sound when the player makes a move or fills a box 
+-Let player decide their names 

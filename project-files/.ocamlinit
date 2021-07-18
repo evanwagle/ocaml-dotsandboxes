@@ -1,0 +1,10 @@
+#directory "_build";;
+#require "ounit2";;
+#require "graphics";;
+#require "ANSITerminal";;
+#load "board.cmo";;
+#load "player.cmo";;
+#load "state.cmo";;
+#load "command.cmo";;
+#load "ai.cmo"
+#load "graphics.cma";;

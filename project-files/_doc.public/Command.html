@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Player.html">
+<link rel="next" href="State.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Player" rel="Chapter" href="Player.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Gui" rel="Chapter" href="Gui.html"><title>Command</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Player.html" title="Player">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="State.html" title="State">Next</a>
+</div>
+<h1>Module <a href="type_Command.html">Command</a></h1>
+
+<pre><span id="MODULECommand"><span class="keyword">module</span> Command</span>: <code class="code">sig</code> <a href="Command.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><code><span id="TYPEresult"><span class="keyword">type</span> <code class="type"></code>result</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTresult.Legal"><span class="constructor">Legal</span></span> <span class="keyword">of</span> <code class="type">int list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTresult.Illegal"><span class="constructor">Illegal</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALparse"><span class="keyword">val</span> parse</span> : <code class="type">string -> <a href="Board.html#TYPEt">Board.t</a> -> <a href="Command.html#TYPEresult">result</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>A move has the form 1 1 2 1. This means the player is drawing a line
+    from point (1,1) to point (2,1). <code class="code">parse str</code> takes a player's string
+    input and decides if it is legal or not. If it is legal, it returns
+    a type Legal of int list representing their move. For example, parse
+    "2 3 3 3" would return <code class="code">2 3 3 3</code>. But parse "banana" return Illegal.</p>
+</div>
+</div>
+</body></html>

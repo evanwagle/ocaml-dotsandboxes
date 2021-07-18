@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Command.html">
+<link rel="next" href="Author.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Player" rel="Chapter" href="Player.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Gui" rel="Chapter" href="Gui.html"><title>State</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Command.html" title="Command">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Author.html" title="Author">Next</a>
+</div>
+<h1>Module <a href="type_State.html">State</a></h1>
+
+<pre><span id="MODULEState"><span class="keyword">module</span> State</span>: <code class="code">sig</code> <a href="State.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.players">players</span>&nbsp;: <code class="type"><a href="Player.html#TYPEt">Player.t</a> * <a href="Player.html#TYPEt">Player.t</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.score">score</span>&nbsp;: <code class="type">int * int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.board">board</span>&nbsp;: <code class="type"><a href="Board.html#TYPEt">Board.t</a></code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+
+
+<pre><code><span id="TYPEstate_result"><span class="keyword">type</span> <code class="type"></code>state_result</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_result.Valid"><span class="constructor">Valid</span></span> <span class="keyword">of</span> <code class="type"><a href="Board.html#TYPEt">Board.t</a> * (int * int) list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_result.Invalid"><span class="constructor">Invalid</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEmove"><span class="keyword">type</span> <code class="type"></code>move</span> = <code class="type">int list</code> </pre>
+
+
+<pre><span id="VALgo"><span class="keyword">val</span> go</span> : <code class="type"><a href="Board.html#TYPEt">Board.t</a> -> <a href="Player.html#TYPEt">Player.t</a> -> int list -> <a href="State.html#TYPEstate_result">state_result</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">go board player move</code> is the board that is created after <code class="code">player</code>
+    makes <code class="code">move</code> on <code class="code">board</code>. Returns Invalid if the move has already
+    been made on the board.</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="next" href="Ai.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Player" rel="Chapter" href="Player.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Gui" rel="Chapter" href="Gui.html"><title>Board</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Ai.html" title="Ai">Next</a>
+</div>
+<h1>Module <a href="type_Board.html">Board</a></h1>
+
+<pre><span id="MODULEBoard"><span class="keyword">module</span> Board</span>: <code class="code">sig</code> <a href="Board.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>The abstract type of a board.</p>
+</div>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><code><span id="TYPEcolor"><span class="keyword">type</span> <code class="type"></code>color</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolor.Blank"><span class="constructor">Blank</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolor.Red"><span class="constructor">Red</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolor.Blue"><span class="constructor">Blue</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALmake_board"><span class="keyword">val</span> make_board</span> : <code class="type">int * int -> <a href="Board.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">make_board size</code> initializes a new board with sizes indicated by
+    <code class="code">size</code>. Requires: Both values of <code class="code">size</code> must be greater or equal to
+    1.</p>
+</div>
+</div>
+
+<pre><span id="VALupdate_board"><span class="keyword">val</span> update_board</span> : <code class="type">(int * int) * (int * int) -> <a href="Board.html#TYPEcolor">color</a> -> <a href="Board.html#TYPEt">t</a> -> <a href="Board.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">update_board points player board</code> is <code class="code">board</code> with a new connection
+    between <code class="code">points</code> owned by <code class="code">player</code>. Requires: There must be a valid
+    path between the two points.</p>
+</div>
+</div>
+
+<pre><span id="VALget_branch"><span class="keyword">val</span> get_branch</span> : <code class="type">(int * int) * (int * int) -> <a href="Board.html#TYPEt">t</a> -> <a href="Board.html#TYPEcolor">color</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">get_branch points board</code> is the color of the connection between
+    <code class="code">points</code> or blank if no connection exists. Requires: There must be a
+    valid path between the two points</p>
+</div>
+</div>
+
+<pre><span id="VALdimensions"><span class="keyword">val</span> dimensions</span> : <code class="type"><a href="Board.html#TYPEt">t</a> -> int * int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">dimensions board</code> are the dimensions of board, i.e. if the board
+    was 4x5 then dimension board would return (4x5). Requires: <code class="code">board</code>
+    has nonzero dimensions.</p>
+</div>
+</div>
+
+<pre><span id="VALscore"><span class="keyword">val</span> score</span> : <code class="type"><a href="Board.html#TYPEt">t</a> -> int * int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">score board</code> is a tuple with the scores of the players.</p>
+</div>
+</div>
+
+<pre><span id="VALend_game"><span class="keyword">val</span> end_game</span> : <code class="type"><a href="Board.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">end_game board</code> is whether or not the game has been finished.</p>
+</div>
+</div>
+
+<pre><span id="VALlast_filled"><span class="keyword">val</span> last_filled</span> : <code class="type"><a href="Board.html#TYPEt">t</a> -> (int * int) list</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">last_filled board</code> is the boxes that were last filled in the
+    previous move if any.</p>
+</div>
+</div>
+</body></html>
