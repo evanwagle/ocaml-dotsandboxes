@@ -1,4 +1,4 @@
-# OCaml Dots and Boxes
+# OCaml Dots and Boxes Game
 
 The classic game of Dots and Boxes made in OCaml!
 
@@ -6,18 +6,23 @@ The classic game of Dots and Boxes made in OCaml!
 
 (Higher versions may work)
 
-## Screenshots:
+## Screenshots
 
 TODO TODO TODO TODO
 
-## Necessary Packages: 
+## Necessary Packages 
 - OUnit2 
 - ANSITerminal 
 - OCaml Graphics Library 
 
 ## Install Instructions
+- Download the latest version of OCaml
+- Install the necessary packages
+- Clone the game from GitHub
+- Open the folder in VSCode (or preferred editor)
+- Run the commands (below) to play
 
-### 2 Ways to Play:
+## How to Play (2 Methods):
 
 ### Method 1 : Play game in GUI:
 - To play simulation of AI vs AI: 
@@ -50,17 +55,18 @@ TODO TODO TODO TODO
   ```
   draw_board board_dimensions window_dimensions counter_dimensions "Easy"
   ```
-- Run `make clean` then 
-- `make build`
+In the terminal:
+- Run `make clean` 
+- Run `make build`
 - Type `utop`
 - Once in utop, type `#use "gui.ml"`
 - GUI will appear in a window on your desktop
-- Press q to quit out of GUI
+- Press 'q' to quit out of GUI
 
 ### Method 2: Play game in terminal:
-- Run `make clean` then `make build`
+In the terminal:
+- Run `make clean` 
+- Run `make build`
 - Type `rm main.byte`
 - Type `make play`
 - Follow the instructions to play the mode you want
-
-
