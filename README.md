@@ -1,4 +1,4 @@
-# OCaml Dots and Boxes Game
+![banner](screenshots/banner.png)
 
 The classic game of Dots and Boxes made in OCaml!
 
@@ -8,7 +8,32 @@ The classic game of Dots and Boxes made in OCaml!
 
 ## Screenshots
 
-TODO TODO TODO TODO
+### GUI Version:
+
+Beginning of Game:
+
+![Game Beginning](screenshots/gui-start-game.png)
+
+Mid Game with boxes filled:
+
+![Mid Game](screenshots/gui-mid-game.png)
+
+Mid Game 2:
+
+![Mid Game 2](screenshots/gui-mid-game-2.png)
+
+End Game Screen (All boxes are filled):
+
+![End Game](screenshots/gui-end-game.png)
+
+### Terminal Version:
+Start Screen:
+
+![Terminal Start](screenshots/terminal-start-game.png)
+
+Stats Screen:
+
+![Terminal Stats](screenshots/terminal-stats-scores.png)
 
 ## Necessary Packages 
 - OUnit2 
@@ -24,9 +49,9 @@ TODO TODO TODO TODO
 
 ## How to Play (2 Methods):
 
-### Method 1 : Play game in GUI:
-- To play simulation of AI vs AI: 
-  - At the bottom of draw_board in gui.ml, change the respective modes of the bots (either "Easy", "Medium", "Hard"). Ex:   
+### Method 1 - Play game in GUI:
+- To play Simulation (AI vs AI): 
+  - At the bottom of draw_board in gui.ml, change the desired difficulty of the bots (Easy, Medium, Hard). Ex:   
   ```
   if mode = "Simulation" then
     loop_simulation default_board "Medium" "Hard" bot1
@@ -36,7 +61,7 @@ TODO TODO TODO TODO
   draw_board board_dimensions window_dimensions counter_dimensions "Simulation"
   ```
 
-- To play Multiplayer: 
+- To play Multiplayer (Player vs Player): 
   - At the bottom of draw_board in gui.ml, change the respective modes to "Mult". Ex:   
   ```
   else player_input () default_board player1 "Mult"
@@ -46,27 +71,28 @@ TODO TODO TODO TODO
   draw_board board_dimensions window_dimensions counter_dimensions "Mult"
   ```
 
-- To play against AI: 
-  - At the bottom of gui.ml change the string input in draw_board so it is the AI difficulty you want. Ex: 
+- To play against AI (Player vs AI): 
+  - At the bottom of gui.ml change the string input in draw_board so it is the AI difficulty you want (Easy, Medium, Hard). Ex: 
   ```
   else player_input () default_board player1 "Easy"
   ```
-  - Change the string input in open_board so it is the difficulty. Ex:
+  - Change the string input in open_board so it is the desired difficulty. Ex:
   ```
   draw_board board_dimensions window_dimensions counter_dimensions "Easy"
   ```
 In the terminal:
 - Run `make clean` 
 - Run `make build`
-- Type `utop`
+- Type `utop` then hit enter
 - Once in utop, type `#use "gui.ml"`
 - GUI will appear in a window on your desktop
-- Press 'q' to quit out of GUI
 
-### Method 2: Play game in terminal:
+(Press 'q' anytime to quit out of GUI)
+
+### Method 2 - Play game in terminal:
 In the terminal:
 - Run `make clean` 
 - Run `make build`
-- Type `rm main.byte`
-- Type `make play`
+- Type `rm main.byte` then hit enter
+- Type `make play` then hit enter
 - Follow the instructions to play the mode you want
