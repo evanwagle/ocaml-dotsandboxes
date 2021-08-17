@@ -1,4 +1,4 @@
-![banner](screenshots/banner.png)
+![banner](screenshots/title-banner.png)
 
 The classic game of Dots and Boxes made in OCaml!
 
@@ -12,19 +12,19 @@ The classic game of Dots and Boxes made in OCaml!
 
 Beginning of Game:
 
-![Game Beginning](screenshots/gui-start-game.png)
+![Game Beginning](screenshots/gui-start.png)
 
 Mid Game with boxes filled:
 
-![Mid Game](screenshots/gui-mid-game.png)
+![Mid Game](screenshots/gui-mid.png)
 
 Mid Game 2:
 
-![Mid Game 2](screenshots/gui-mid-game2.png)
+![Mid Game 2](screenshots/gui-mid-2.png)
 
 End Game Screen (All boxes are filled):
 
-![End Game](screenshots/gui-end-game.png)
+![End Game](screenshots/gui-end.png)
 
 ### Terminal Version:
 Start Screen:
