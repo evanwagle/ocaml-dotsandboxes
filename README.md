@@ -20,7 +20,7 @@ Mid Game with boxes filled:
 
 Mid Game 2:
 
-![Mid Game 2](screenshots/gui-mid-game-2.png)
+![Mid Game 2](screenshots/gui-mid-game2.png)
 
 End Game Screen (All boxes are filled):
 
