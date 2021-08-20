@@ -1,6 +1,6 @@
 ![banner](screenshots/title-banner.png)
 
-The classic game of Dots and Boxes made in OCaml!
+The classic game of Dots and Boxes made in OCaml.
 
 - OCaml Version 4.11.1 
 
