@@ -6,6 +6,8 @@ The classic game of Dots and Boxes made in OCaml.
 
 (Higher versions may work)
 
+Authors: Evan Wagle, Timur Beletskii, Ethan Waxman, Lauren Kiachian
+
 ## Screenshots
 
 ### GUI Version:
